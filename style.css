@@ -1,0 +1,27 @@
+.main-card { border-radius: 20px; }
+.drop-area {
+    border: 3px dashed #0d6efd;
+    border-radius: 20px;
+    padding: 50px 20px;
+    text-align: center;
+    background: #fafafa;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.drop-area.active { background-color: #e8f1ff; border-color: #0056b3; transform: scale(1.02); }
+.icon-upload { font-size: 3.5rem; color: #0d6efd; margin-bottom: 10px; opacity: 0.6; }
+
+#preview-box { max-height: 400px; overflow-y: auto; }
+.act-row { padding: 12px 15px; border-bottom: 1px solid #f1f1f1; display: flex; justify-content: space-between; align-items: center; }
+.act-row:last-child { border-bottom: none; }
+
+.badge-date { background: #0d6efd; color: white; padding: 4px 12px; border-radius: 20px; font-weight: 600; font-size: 0.85rem; }
+.step-card { background: #f8f9fa; padding: 15px; border-radius: 12px; border-bottom: 4px solid #0d6efd; height: 100%; }
+
+.social-links { display: flex; justify-content: center; gap: 20px; }
+.social-icon { font-size: 1.6rem; color: #adb5bd; transition: 0.3s; text-decoration: none; }
+.social-icon.wa:hover { color: #25d366; transform: translateY(-3px); }
+.social-icon.ig:hover { color: #e1306c; transform: translateY(-3px); }
+
+.animate-fade-in { animation: fadeIn 0.4s ease-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }

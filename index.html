@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenCalendario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+
+<div class="container py-5 flex-grow-1">
+    <div class="row justify-content-center">
+        <div class="col-md-10 col-lg-8">
+            <div class="text-center mb-4">
+                <h1 class="fw-bold text-primary">Generador de Calendario CSV</h1>
+                <p class="text-muted">Agrega las Actividades de tu Plan de Trabajo SUAYED-FCA a un Calendario</p>
+            </div>
+
+            <div class="card main-card shadow-sm border-0 p-4 mb-5">
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold small text-secondary">NOMBRE DE LA MATERIA</label>
+                        <input type="text" id="materia" class="form-control" placeholder="Ej. Coaching">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold small text-secondary">CATEGORÍA CALENDARIO</label>
+                        <input type="text" id="categoria" class="form-control" placeholder="Ej. Tareas UNAM">
+                    </div>
+                </div>
+
+                <div id="drop-zone" class="drop-area">
+                    <div class="icon-upload"><i class="fa-solid fa-file-pdf"></i></div>
+                    <h5 id="status-text" class="fw-bold">Arrastra tu PDF aquí o haz clic</h5>
+                    <p class="text-muted small">Optimizado para tablas: Fecha | Unidad | Actividad</p>
+                    <input type="file" id="file-input" hidden accept=".pdf">
+                </div>
+
+                <div id="preview-area" class="d-none mt-4 animate-fade-in">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h6 class="fw-bold text-primary mb-0">Actividades Detectadas:</h6>
+                        <button id="btn-limpiar" class="btn btn-sm btn-outline-danger">Reiniciar</button>
+                    </div>
+                    <div id="preview-box" class="border rounded mb-3 bg-white"></div>
+                    <button id="btn-descargar" class="btn btn-success btn-lg w-100 fw-bold shadow">
+                        <i class="fa-solid fa-download me-2"></i>Descargar Calendario (.csv)
+                    </button>
+                </div>
+            </div>
+
+            <div class="card border-0 shadow-sm p-4 mb-5">
+                <h5 class="fw-bold mb-4 text-center"><i class="fa-solid fa-book-bookmark me-2"></i>Tutorial de Importación</h5>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="step-card">
+                            <h6 class="fw-bold text-primary"><i class="fa-brands fa-windows me-2"></i>Outlook (App PC)</h6>
+                            <p class="small text-muted mb-0">Archivo > Abrir > Importar > Importar de otro archivo > CSV > Seleccionar Carpeta Calendario.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="step-card">
+                            <h6 class="fw-bold text-warning"><i class="fa-brands fa-google me-2"></i>Google Calendar</h6>
+                            <p class="small text-muted mb-0">Configuración > Importar y exportar > Seleccionar archivo CSV > Seleccionar calendario.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="text-center py-4 bg-white border-top">
+    <div class="container">
+        <p class="text-muted small mb-2">Desarrollado para la comunidad SUAYED por <b>Gustavo Ramirez</b></p>
+        <div class="social-links">
+            <a href="https://wa.me/521XXXXXXXXXX" target="_blank" class="social-icon wa"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://instagram.com/tu_usuario" target="_blank" class="social-icon ig"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
